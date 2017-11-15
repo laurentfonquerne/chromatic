@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>ChromaticImage</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="chromatic image fournit un outil d'aide au design. L'application renvoie les codes couleurs principaux de la photo analysée">
+        <meta name="author" content="Laurent Fonquerne">
+        <!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto' type='text/css'> -->
+        <link rel='stylesheet' href='./node_modules/bootstrap/dist/css/bootstrap.css' type='text/css'>
+        <link rel='stylesheet' href='./node_modules/bootstrap/dist/css/bootstrap-theme.css' type='text/css'>
+        <link rel='stylesheet' href='./css/index.css' type='text/css'>
+    </head>
+    
+    <body>
+        <div class="container-fluid" id="container-id">
+            <h1 id="titre">CHROMATIC IMAGE</h1>
+            <div class="row" id="content">            
+                <div class="col-md-1" id="pleft">
+                    <p>
+                        partie gauche
+                    </p>
+                </div>
+                <div class="col-md-8" id="pcenter">
+                    <div class="window-picture" id="previewer">
+                        <h2>NUANCIER HTML</h2>
+                        <p>Uploadez n’importe quelle photo pour obtenir son nuancier HTML.</p>
+                        <canvas id="previewers" class="canvasBox" style="max-width: 100%;"></canvas>                        
+                    </div>
+                    <div class="trombi-picture" id="trombinoscope"> 
+                        <h2>HISTORIQUE</h2>
+                        <div class="picture-saved" id="saved-picture">
+                        </div>     
+                    </div>
+                </div>
+                <div class="col-md-3" id="pright">
+                    <p>
+                        partie droite
+                    </p>
+                    <form>
+                        <input type="file">
+                        <input type="submit" id="file-submit"><br><br>
+                        <input type="url" placeholder="URL">
+                        <input type="submit" value="submit" id="url-submit"><br><br>
+                        <input type="submit" value="clear" id="url-delete"><br><br>
+                    </form>
+                    <div class="colorset-viewer" id="color-viewer"> 
+                        <h2>NUANCIER</h2>
+                    </div>
+                </div>
+            </div>            
+		</div>
+        <script src="./node_modules/jquery/dist/jquery.js"></script>
+        <script src="./poc/html.js"></script>
+    </body>
+</html>
